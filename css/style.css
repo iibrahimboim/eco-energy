@@ -595,3 +595,152 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ============================================================
+   DATA & GRAFIK SECTION
+   ============================================================ */
+#data-grafik .card {
+  transition: box-shadow var(--transition);
+}
+
+#data-grafik .card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Stat boxes */
+#data-grafik .bg-light-cream.rounded-3 {
+  transition: transform var(--transition);
+}
+
+#data-grafik .bg-light-cream.rounded-3:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive canvas height */
+@media (max-width: 767.98px) {
+  #data-grafik canvas#chartBarPerButir {
+    height: 420px !important;
+  }
+
+  #data-grafik canvas#chartBarJurusan {
+    height: 260px !important;
+  }
+
+  #data-grafik [style*="height: 340px"] {
+    height: 420px !important;
+  }
+
+  #data-grafik [style*="height: 300px"] {
+    height: 260px !important;
+  }
+}
+
+/* ============================================================
+   AKSI & REKOMENDASI SECTION
+   ============================================================ */
+.insight-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--terra-light) 0%, var(--terra) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(42, 131, 95, 0.2);
+  transition: transform var(--transition);
+}
+
+.insight-icon-wrapper:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.action-card {
+  background: #fff;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--terra-light), var(--terra));
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.action-card:hover::before {
+  transform: scaleX(1);
+}
+
+.action-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.action-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--terra) 0%, var(--terra-dark) 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.action-icon i {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.action-icon-amber {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%) !important;
+}
+
+.action-icon-teal {
+  background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%) !important;
+}
+
+.action-card:hover .action-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.action-impact {
+  background: var(--cream-subtle);
+  border-left: 3px solid var(--terra);
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.action-impact i {
+  font-size: 1rem;
+}
+
+.action-impact small {
+  color: var(--gray-700);
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .insight-icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .action-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .action-icon i {
+    font-size: 1.5rem;
+  }
+}

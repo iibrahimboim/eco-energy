@@ -50,7 +50,10 @@
             <a class="nav-link" href="#tujuan">Tujuan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cuplikan">Cuplikan Proyek</a>
+            <a class="nav-link" href="#data-grafik">Data &amp; Grafik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aksi-rekomendasi">Aksi &amp; Rekomendasi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#profil-tim">Profil Tim</a>
@@ -236,60 +239,320 @@
     </div>
   </section>
 
-  <!-- ======================= CUPLIKAN / TEASER ======================= -->
-  <section id="cuplikan" class="section-padding" style="background: #fff;">
+  <!-- ======================= DATA & GRAFIK ======================= -->
+  <section id="data-grafik" class="section-padding bg-light-section">
     <div class="container">
       <div class="text-center mb-5">
-        <span class="badge badge-cream rounded-pill px-3 py-2 mb-2">
-          <i class="bi bi-rocket-takeoff-fill me-1"></i>Coming Soon
+        <span class="badge badge-terra rounded-pill px-3 py-2 mb-2">
+          <i class="bi bi-bar-chart-fill me-1"></i>Hasil Kuesioner
         </span>
-        <h2 class="section-title fw-bold">Cuplikan Proyek</h2>
+        <h2 class="section-title fw-bold">Data &amp; Grafik</h2>
         <div class="section-divider mx-auto"></div>
+        <p class="text-muted mt-3 mx-auto" style="max-width: 640px;">
+          Hasil kuesioner perilaku hemat energi dari <strong>636 siswa</strong> kelas XI
+          (99,4% partisipasi), diisi Oktober–November 2026.
+          Skala Likert 1–4, total 10 butir pernyataan.
+        </p>
       </div>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="teaser-card text-center p-5 rounded-4 position-relative overflow-hidden">
-            <div class="teaser-bg-icon">
-              <i class="bi bi-clock-history"></i>
+      <!-- Baris 1: Pie + Statistik Ringkas -->
+      <div class="row g-4 align-items-stretch mb-4">
+
+        <!-- Pie Chart -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
+            <h6 class="fw-bold mb-1">
+              <i class="bi bi-pie-chart-fill text-terra me-2"></i>Distribusi Kategori Siswa
+            </h6>
+            <p class="text-muted small mb-3">
+              Berdasarkan rata-rata skor per butir (1,00–4,00)
+            </p>
+            <div class="d-flex justify-content-center align-items-center" style="min-height: 280px;">
+              <canvas id="chartPieKategori" style="max-width: 280px; max-height: 280px;"></canvas>
             </div>
-            <div class="position-relative" style="z-index: 2;">
-              <div class="mb-4">
-                <span class="teaser-phase-badge">FASE 2 & 3</span>
-              </div>
-              <i class="bi bi-graph-up-arrow display-3 text-terra mb-3 d-block"></i>
-              <h4 class="fw-bold text-white mb-3">Nantikan Pembaruan Berikutnya!</h4>
-              <p class="text-white-50 mx-auto mb-4" style="max-width: 600px;">
-                Kami sedang mengumpulkan <strong class="text-terra">data hasil angket observasi nyata</strong> dari
-                warga sekolah tentang kebiasaan penggunaan energi. Di fase berikutnya, kamu akan melihat:
-              </p>
-              <div class="row g-3 justify-content-center mb-4">
-                <div class="col-sm-4">
-                  <div class="teaser-feature-item">
-                    <i class="bi bi-clipboard-data-fill fs-2 text-terra"></i>
-                    <p class="mb-0 mt-2 small fw-semibold text-white">Data & Grafik Hasil Angket</p>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="teaser-feature-item">
-                    <i class="bi bi-journal-check fs-2 text-terra"></i>
-                    <p class="mb-0 mt-2 small fw-semibold text-white">Analisis Kebiasaan Energi</p>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="teaser-feature-item">
-                    <i class="bi bi-signpost-split-fill fs-2 text-terra"></i>
-                    <p class="mb-0 mt-2 small fw-semibold text-white">Panduan Rekomendasi Aksi</p>
-                  </div>
+          </div>
+        </div>
+
+        <!-- Statistik Ringkas -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
+            <h6 class="fw-bold mb-3">
+              <i class="bi bi-clipboard-data-fill text-terra me-2"></i>Ringkasan Hasil
+            </h6>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="bg-light-cream rounded-3 p-3 text-center">
+                  <div class="fs-2 fw-800" style="color: var(--terra-dark);">3,36</div>
+                  <div class="small text-muted">Rata-rata Skor<br>(skala 1–4)</div>
                 </div>
               </div>
-              <span class="badge badge-terra rounded-pill px-4 py-2 fs-6">
-                <i class="bi bi-hourglass-split me-1"></i>Segera Hadir &mdash; Stay Tuned!
+              <div class="col-6">
+                <div class="bg-light-cream rounded-3 p-3 text-center">
+                  <div class="fs-2 fw-800" style="color: var(--terra);">90,8%</div>
+                  <div class="small text-muted">Sering Hemat Energi<br>(rata-rata semua butir)</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="bg-light-cream rounded-3 p-3 text-center">
+                  <div class="fs-2 fw-800" style="color: var(--terra-dark);">636</div>
+                  <div class="small text-muted">Jumlah Responden<br>Siswa Kelas XI</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="bg-light-cream rounded-3 p-3 text-center">
+                  <div class="fs-2 fw-800" style="color: var(--terra);">59,4%</div>
+                  <div class="small text-muted">Kategori<br>Sangat Baik</div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3">
+            <div class="small">
+              <div class="fw-semibold mb-2 text-muted">Sorotan Butir:</div>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge badge-terra rounded-pill px-3 py-1">
+                  <i class="bi bi-arrow-up-circle-fill me-1"></i>P01 Tertinggi (3,51)
+                </span>
+                <span class="badge badge-terra rounded-pill px-3 py-1">
+                  <i class="bi bi-arrow-up-circle-fill me-1"></i>P02 (3,46)
+                </span>
+                <span class="badge badge-cream rounded-pill px-3 py-1">
+                  <i class="bi bi-arrow-down-circle-fill me-1"></i>P04 Terendah (3,22)
+                </span>
+                <span class="badge badge-cream rounded-pill px-3 py-1">
+                  <i class="bi bi-arrow-down-circle-fill me-1"></i>P09 (3,22)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baris 2: Bar Horizontal per Butir -->
+      <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+        <h6 class="fw-bold mb-1">
+          <i class="bi bi-bar-chart-steps text-terra me-2"></i>Rata-rata Skor per Butir Pernyataan
+        </h6>
+        <p class="text-muted small mb-3">P01–P10 · Skala 1–4 · n = 636 siswa</p>
+        <div class="chart-container" style="position: relative; height: 380px; width: 100%;">
+          <canvas id="chartBarPerButir"></canvas>
+        </div>
+        <!-- Legend butir -->
+        <div class="mt-3">
+          <div class="row g-1">
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P01</strong> Praktik hemat energi sehari-hari</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P02</strong> Tindakan nyata di bengkel/lab/kelas/rumah</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P03</strong> Matikan lampu/AC/kipas saat kelas kosong</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P04</strong> Batasi penggunaan gawai/laptop</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P05</strong> Pilih fasilitas/transportasi hemat energi</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P06</strong> Cabut charger/steker setelah dipakai</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P07</strong> Manfaatkan cahaya matahari (buka tirai/jendela)</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P08</strong> Atur suhu AC/kipas secukupnya</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P09</strong> Berani menegur/mengajak teman hemat listrik</small></div>
+            <div class="col-12 col-md-6"><small class="text-muted"><strong>P10</strong> Pastikan peralatan mati sebelum pulang</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baris 3: Bar Vertikal per Jurusan -->
+      <div class="card border-0 shadow-sm rounded-4 p-4">
+        <h6 class="fw-bold mb-1">
+          <i class="bi bi-graph-up text-terra me-2"></i>Rata-rata Skor per Jurusan
+        </h6>
+        <p class="text-muted small mb-3">7 jurusan kelas XI · Skala 1–4</p>
+        <div class="chart-container" style="position: relative; height: 320px; width: 100%;">
+          <canvas id="chartBarJurusan"></canvas>
+        </div>
+        <div class="mt-3 d-flex flex-wrap gap-2">
+          <span class="badge badge-terra rounded-pill px-3 py-1">
+            <i class="bi bi-trophy-fill me-1"></i>Tertinggi: PMN (Pemasaran) — 3,51
+          </span>
+          <span class="badge badge-cream rounded-pill px-3 py-1">
+            <i class="bi bi-info-circle me-1"></i>Terendah: PPLG — 3,24
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= AKSI & REKOMENDASI ======================= -->
+  <section id="aksi-rekomendasi" class="section-padding" style="background: #fff;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge badge-terra rounded-pill px-3 py-2 mb-2">
+          <i class="bi bi-lightbulb-fill me-1"></i>Fase 3
+        </span>
+        <h2 class="section-title fw-bold">Aksi &amp; Rekomendasi</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="text-muted mt-3 mx-auto" style="max-width: 640px;">
+          Berdasarkan hasil kuesioner, berikut adalah langkah praktis yang bisa kamu terapkan untuk menghemat energi,
+          terutama dalam <strong>memilih fasilitas dan transportasi hemat energi</strong> (P05).
+        </p>
+      </div>
+
+      <!-- Insight dari Data P05 -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-light-cream">
+            <div class="row align-items-center g-4">
+              <div class="col-md-3 text-center">
+                <div class="insight-icon-wrapper mx-auto mb-2">
+                  <i class="bi bi-bicycle fs-1 text-terra"></i>
+                </div>
+                <h6 class="fw-bold text-terra mb-0">P05</h6>
+              </div>
+              <div class="col-md-9">
+                <h5 class="fw-bold text-cream mb-2">
+                  <i class="bi bi-exclamation-circle-fill me-2"></i>Apa yang Data Katakan?
+                </h5>
+                <p class="mb-2">
+                  <strong>13.4%</strong> siswa masih jarang memilih transportasi atau fasilitas hemat energi
+                  seperti berjalan kaki, bersepeda, atau transportasi umum untuk jarak dekat.
+                </p>
+                <p class="mb-0 text-muted small">
+                  <i class="bi bi-bar-chart-line-fill me-1"></i>
+                  Rata-rata skor: <strong>3.30</strong> &mdash; termasuk 3 butir dengan performa terendah.
+                  Mari kita ubah kebiasaan ini bersama!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rekomendasi Aksi -->
+      <div class="row g-4">
+        <!-- Rekomendasi 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="action-icon mb-3">
+              <i class="bi bi-bicycle"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Bersepeda atau Jalan Kaki</h5>
+            <p class="text-muted mb-3">
+              Untuk jarak kurang dari 2 km, pilih bersepeda atau jalan kaki. Selain hemat energi, ini juga menyehatkan tubuh dan mengurangi polusi udara.
+            </p>
+            <div class="action-impact">
+              <i class="bi bi-check-circle-fill text-terra me-1"></i>
+              <small class="fw-semibold">Dampak: Nol emisi karbon, sehat, ekonomis</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rekomendasi 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="action-icon action-icon-amber mb-3">
+              <i class="bi bi-bus-front"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Gunakan Transportasi Umum</h5>
+            <p class="text-muted mb-3">
+              Bus, angkot, atau kereta api mengangkut banyak orang sekaligus, sehingga konsumsi energi per orang jauh lebih rendah dibanding kendaraan pribadi.
+            </p>
+            <div class="action-impact">
+              <i class="bi bi-check-circle-fill text-terra me-1"></i>
+              <small class="fw-semibold">Dampak: Emisi lebih rendah per penumpang</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rekomendasi 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="action-icon action-icon-teal mb-3">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Carpooling (Naik Bareng)</h5>
+            <p class="text-muted mb-3">
+              Ajak teman satu daerah untuk naik bareng dalam satu kendaraan. Lebih hemat bahan bakar, lebih sedikit kendaraan di jalan, lebih seru perjalanannya!
+            </p>
+            <div class="action-impact">
+              <i class="bi bi-check-circle-fill text-terra me-1"></i>
+              <small class="fw-semibold">Dampak: Hemat BBM, kurangi kemacetan</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rekomendasi 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="action-icon mb-3">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Pilih Kendaraan Listrik</h5>
+            <p class="text-muted mb-3">
+              Jika memungkinkan, gunakan motor atau mobil listrik. Konsumsi energi lebih efisien dan tidak menghasilkan emisi gas buang langsung.
+            </p>
+            <div class="action-impact">
+              <i class="bi bi-check-circle-fill text-terra me-1"></i>
+              <small class="fw-semibold">Dampak: Lebih efisien, ramah lingkungan</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rekomendasi 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="action-icon action-icon-amber mb-3">
+              <i class="bi bi-pin-map-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Rencanakan Perjalanan</h5>
+            <p class="text-muted mb-3">
+              Gabungkan beberapa tujuan dalam satu perjalanan agar tidak bolak-balik. Hemat waktu, hemat bahan bakar, lebih efisien!
+            </p>
+            <div class="action-impact">
+              <i class="bi bi-check-circle-fill text-terra me-1"></i>
+              <small class="fw-semibold">Dampak: Kurangi jarak tempuh total</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rekomendasi 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="action-icon action-icon-teal mb-3">
+              <i class="bi bi-shop"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Pilih Layanan Lokal</h5>
+            <p class="text-muted mb-3">
+              Belanja atau gunakan fasilitas yang dekat dengan rumah atau sekolah. Lebih dekat = lebih sedikit transportasi = lebih hemat energi.
+            </p>
+            <div class="action-impact">
+              <i class="bi bi-check-circle-fill text-terra me-1"></i>
+              <small class="fw-semibold">Dampak: Dukung ekonomi lokal, hemat energi</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+          <div class="card border-0 shadow-sm rounded-4 p-4 text-center" style="background: linear-gradient(135deg, var(--terra-dark) 0%, var(--terra) 100%);">
+            <i class="bi bi-hand-thumbs-up-fill fs-1 text-white mb-3"></i>
+            <h5 class="fw-bold text-white mb-2">Mulai Sekarang, Mulai dari Diri Sendiri</h5>
+            <p class="text-white mb-4 opacity-75">
+              Setiap pilihan kecil yang kamu buat hari ini adalah langkah besar untuk masa depan bumi.
+              Jangan ragu untuk memulai kebiasaan baru!
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <span class="badge bg-white text-terra rounded-pill px-3 py-2">
+                <i class="bi bi-bicycle me-1"></i>Bersepeda
+              </span>
+              <span class="badge bg-white text-terra rounded-pill px-3 py-2">
+                <i class="bi bi-bus-front me-1"></i>Naik Bus
+              </span>
+              <span class="badge bg-white text-terra rounded-pill px-3 py-2">
+                <i class="bi bi-people-fill me-1"></i>Carpooling
+              </span>
+              <span class="badge bg-white text-terra rounded-pill px-3 py-2">
+                <i class="bi bi-pin-map-fill me-1"></i>Rencanakan
               </span>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -409,6 +672,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+  <!-- Data Energi -->
+  <script src="data-perilaku-energi.js"></script>
+
+  <!-- Charts -->
+  <script src="js/charts.js"></script>
 
   <!-- Custom JS -->
   <script src="js/script.js"></script>
